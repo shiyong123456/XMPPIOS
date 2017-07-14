@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hf1-s1-09S">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - XMPP-->
+        <scene sceneID="XLW-Kd-Uyk">
+            <objects>
+                <navigationController title="XMPP" definesPresentationContext="YES" id="Hf1-s1-09S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SZo-iq-Hu7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dOV-an-4rS" kind="relationship" relationship="rootViewController" id="bMF-eK-zAp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyp-ek-VVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="-63"/>
+        </scene>
+        <!--View Controller - XMPP带内注册及连接-->
+        <scene sceneID="rkg-Le-Mn1">
+            <objects>
+                <viewController id="dOV-an-4rS" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbD-Mc-zAq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-zf-2jB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="bOL-iR-xsF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5222" borderStyle="roundedRect" placeholder="port" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLd-Jf-fui">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="JH2-v3-O4O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK3-8z-cgL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="Cg4-VZ-5KM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dawn" borderStyle="roundedRect" placeholder="userName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfd-Af-1Qm">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlx-CK-bHQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="xpN-bR-d8b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="连接">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectToOpenfire:" destination="dOV-an-4rS" eventType="touchUpInside" id="X13-B0-Rua"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1111" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-7m-KSg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="ZI1-i4-leK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSZ-5j-JYa">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Lx1-ma-7Ks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registrationInBand:" destination="dOV-an-4rS" eventType="touchUpInside" id="rRK-eN-o9K"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="openfire服务器，先连接后注册！ xcode 4.6/iPhone 6.1 simulator/Storyboard" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="269" translatesAutoresizingMaskIntoConstraints="NO" id="t7H-ru-SQg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="GxS-a0-Ea5"/>
+                                    <constraint firstAttribute="height" constant="62" id="oNk-PE-qi2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkQ-Br-kG1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="kdn-vC-Yfw"/>
+                                    <constraint firstAttribute="height" constant="33" id="xIj-A4-oeS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="My friends list">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GKe-q2-z9t" kind="push" id="0ga-TO-1PB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dlx-CK-bHQ" firstAttribute="top" secondItem="bbD-Mc-zAq" secondAttribute="top" constant="133" id="1Qb-qW-PZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="DK3-8z-cgL" secondAttribute="trailing" constant="117" id="3Jn-Nv-4j8"/>
+                            <constraint firstItem="xSZ-5j-JYa" firstAttribute="top" secondItem="bbD-Mc-zAq" secondAttribute="top" constant="179" id="3bS-bN-eyv"/>
+                            <constraint firstAttribute="bottom" secondItem="hkQ-Br-kG1" secondAttribute="bottom" constant="89" id="6Mk-jF-RAt"/>
+                            <constraint firstAttribute="trailing" secondItem="xSZ-5j-JYa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CvF-Z0-ng8"/>
+                            <constraint firstItem="t7H-ru-SQg" firstAttribute="top" secondItem="xSZ-5j-JYa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HS8-iW-VhK"/>
+                            <constraint firstItem="2qH-7m-KSg" firstAttribute="centerY" secondItem="xSZ-5j-JYa" secondAttribute="centerY" type="default" id="I0o-Pv-BdZ"/>
+                            <constraint firstItem="tfd-Af-1Qm" firstAttribute="leading" secondItem="bbD-Mc-zAq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JVx-aa-udv"/>
+                            <constraint firstAttribute="trailing" secondItem="Dlx-CK-bHQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PX0-Cv-g1X"/>
+                            <constraint firstAttribute="trailing" secondItem="DLd-Jf-fui" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qqm-tg-E9r"/>
+                            <constraint firstItem="hkQ-Br-kG1" firstAttribute="leading" secondItem="bbD-Mc-zAq" secondAttribute="leading" constant="19" id="TsE-vk-I1B"/>
+                            <constraint firstItem="7BV-zf-2jB" firstAttribute="leading" secondItem="bbD-Mc-zAq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XEX-cy-pfC"/>
+                            <constraint firstItem="t7H-ru-SQg" firstAttribute="centerX" secondItem="hkQ-Br-kG1" secondAttribute="centerX" type="default" id="YEA-mx-vDa"/>
+                            <constraint firstAttribute="trailing" secondItem="tfd-Af-1Qm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZqR-7L-Hhr"/>
+                            <constraint firstItem="DK3-8z-cgL" firstAttribute="baseline" secondItem="7BV-zf-2jB" secondAttribute="baseline" type="default" id="bgm-38-bTR"/>
+                            <constraint firstItem="DK3-8z-cgL" firstAttribute="baseline" secondItem="DLd-Jf-fui" secondAttribute="baseline" type="default" id="dYo-1o-sgs"/>
+                            <constraint firstItem="tfd-Af-1Qm" firstAttribute="top" secondItem="bbD-Mc-zAq" secondAttribute="top" constant="90" id="db2-22-p3j"/>
+                            <constraint firstItem="xSZ-5j-JYa" firstAttribute="leading" secondItem="2qH-7m-KSg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="i39-AK-06Q"/>
+                            <constraint firstItem="7BV-zf-2jB" firstAttribute="top" secondItem="bbD-Mc-zAq" secondAttribute="top" constant="43" id="lQv-4h-aPQ"/>
+                            <constraint firstItem="Dlx-CK-bHQ" firstAttribute="leading" secondItem="bbD-Mc-zAq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pOR-pA-sDO"/>
+                            <constraint firstItem="2qH-7m-KSg" firstAttribute="leading" secondItem="bbD-Mc-zAq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y7j-bb-KEe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="XMPP带内注册及连接" id="OB1-V6-HGq"/>
+                    <connections>
+                        <outlet property="hostTextField" destination="7BV-zf-2jB" id="vbR-rj-KFy"/>
+                        <outlet property="myNameTextField" destination="tfd-Af-1Qm" id="Zak-cF-PUX"/>
+                        <outlet property="passwordTextField" destination="2qH-7m-KSg" id="31z-sk-Qeb"/>
+                        <outlet property="portTextField" destination="DLd-Jf-fui" id="JbF-bo-SC8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Td1-fu-BNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-63"/>
+        </scene>
+        <!--Friends List View Controller - 好友列表-->
+        <scene sceneID="Xl3-eR-2Kk">
+            <objects>
+                <tableViewController id="GKe-q2-z9t" customClass="FriendsListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="w8l-cm-y3h">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="dd6-Ij-cRH" detailTextLabel="BeX-OK-MkF" rowHeight="45" style="IBUITableViewCellStyleValue1" id="PlK-Lb-uJg">
+                                <rect key="frame" x="0.0" y="22" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="31" translatesAutoresizingMaskIntoConstraints="NO" id="dd6-Ij-cRH">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeX-OK-MkF">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="mm5-N8-a5n" kind="push" id="QcQ-2A-Sgu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GKe-q2-z9t" id="y8s-fF-RWn"/>
+                            <outlet property="delegate" destination="GKe-q2-z9t" id="0HS-nA-GgB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="好友列表" id="DSs-1b-60n">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wkR-eM-qsf">
+                            <connections>
+                                <action selector="addFriend:" destination="GKe-q2-z9t" id="whh-tV-Mxq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aH-bO-2Yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="-63"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Msa-LP-gfX">
+            <objects>
+                <viewController id="mm5-N8-a5n" customClass="ChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzy-PM-TDc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-5G-umh">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="120" id="giw-MW-0BV">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mm5-N8-a5n" id="QwK-96-nte"/>
+                                    <outlet property="delegate" destination="mm5-N8-a5n" id="Gzq-CI-4c9"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7B-lu-8uC">
+                                <items>
+                                    <barButtonItem style="plain" id="LhO-3K-lRp">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nGs-sR-vvK">
+                                            <rect key="frame" x="12" y="5" width="72" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="长按录音">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="beginAudio:" destination="mm5-N8-a5n" eventType="touchDown" id="QzN-BI-Ebo"/>
+                                                <action selector="endAudio:" destination="mm5-N8-a5n" eventType="touchUpInside" id="tpD-q5-5Hl"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="fbG-8S-s3F">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3f4-ZW-bDU">
+                                            <rect key="frame" x="94" y="7" width="108" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="mm5-N8-a5n" id="WMt-ma-qi4"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem title="发送" id="kL3-H1-f2L">
+                                        <connections>
+                                            <action selector="sendDone:" destination="mm5-N8-a5n" id="KFY-j1-GdP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="取消" id="5Jd-yw-EuV">
+                                        <connections>
+                                            <action selector="cancelDone:" destination="mm5-N8-a5n" id="AEm-MI-C4e"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e1U-5G-umh" firstAttribute="trailing" secondItem="fzy-PM-TDc" secondAttribute="trailing" type="default" id="1H1-U0-EH1"/>
+                            <constraint firstItem="q7B-lu-8uC" firstAttribute="bottom" secondItem="fzy-PM-TDc" secondAttribute="bottom" type="default" id="BJT-5e-rIf"/>
+                            <constraint firstItem="e1U-5G-umh" firstAttribute="leading" secondItem="fzy-PM-TDc" secondAttribute="leading" type="default" id="CGw-le-89l"/>
+                            <constraint firstItem="q7B-lu-8uC" firstAttribute="leading" secondItem="fzy-PM-TDc" secondAttribute="leading" type="default" id="Dc4-xa-1Ot"/>
+                            <constraint firstItem="e1U-5G-umh" firstAttribute="bottom" secondItem="q7B-lu-8uC" secondAttribute="top" type="default" id="jxM-HU-fgO"/>
+                            <constraint firstItem="e1U-5G-umh" firstAttribute="top" secondItem="fzy-PM-TDc" secondAttribute="top" type="default" id="mgf-BV-1Jz"/>
+                            <constraint firstItem="q7B-lu-8uC" firstAttribute="trailing" secondItem="fzy-PM-TDc" secondAttribute="trailing" type="default" id="z14-RT-icd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SDx-zc-04f"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="3f4-ZW-bDU" id="AK0-KK-UFB"/>
+                        <outlet property="tableView" destination="e1U-5G-umh" id="ihr-GG-GfL"/>
+                        <outlet property="toolbar" destination="q7B-lu-8uC" id="qOm-GQ-SSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6g-fe-xAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="-63"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ChatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="beginAudio:"/>
+                <relationship kind="action" name="cancelDone:"/>
+                <relationship kind="action" name="endAudio:"/>
+                <relationship kind="action" name="sendDone:"/>
+                <relationship kind="outlet" name="messageTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="FriendsListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FriendsListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addFriend:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="connectToOpenfire:"/>
+                <relationship kind="action" name="registrationInBand:"/>
+                <relationship kind="outlet" name="hostTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="portTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
